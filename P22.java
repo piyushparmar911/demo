@@ -1,25 +1,54 @@
 import java.util.Scanner;
 
 public class P22 {
-    public static void main(String[] args)
+    public static void main(String args[])
     {
-        int[][] met = new int[3][3];
+        int[][] met1 = new int[3][3];
+        int[][] met2 = new int[3][3];
         Scanner sc = new Scanner(System.in);
-        int met1 = 0;
         // for metrix 1
-        for(int i=1; i<=3; i++)
+        for(int i=0; i<=2; i++)
         {
-            for(int j=1; j<=3; j++)
+            for(int j=0; j<=2; j++)
             {
-                System.out.println("enter value for row no" +i +" "+j);
-                met1 = sc.nextInt();
+                System.out.print("enter value for row no" +i +" "+j+": ");
+                met1[i][j] = sc.nextInt(); 
             }
         }
-        for(int i=0; i<=met1;)
-        {
-            System.out.print(" "+i);
 
+        // for metrix 2
+        for(int i=0; i<=2; i++)
+        {
+            for(int j=0; j<=2; j++)
+            {
+                System.out.print("enter value for row no" +i +" "+j+": ");
+                met2[i][j] = sc.nextInt(); 
+            }
         }
+
+        // print for metrix 1
+        for(int i=0; i<=2; i++ )
+        {
+            for(int j=0; j<=2; j++)
+            {
+                System.out.print(met1[i][j]+" ");
+   
+            }
+            System.out.println("");
+        }
+        System.out.print("   +   ");
+
+        for(int i=0; i<=2; i++ )
+        {
+            for(int j=0; j<=2; j++)
+            {
+                System.out.print(met2[i][j]+" ");
+   
+            }
+            System.out.println("");
+        }
+        // print for metrix 2
+
         // // for metrix 2
         // for(int i=0; i<=9; i++)
         // {
